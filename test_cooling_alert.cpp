@@ -25,10 +25,10 @@ TEST(CoolingAlertTest, NoAlert) {
 // ----------- STEP 4 -----------------
 // Add the next straight-forward test: active cooling type
 
-// TEST(CoolingAlertTest, ActiveCoolingAlertToEmail) {
-//     Action action = battery_temperature_to_action(HI_ACTIVE_COOLING, 60.0f);
-//     ASSERT_EQ(action.actionType, ALERT_EMAIL);
-//     ASSERT_STREQ(action.actionBody, "Temperature alert: 60.0F");
-// }
+TEST(CoolingAlertTest, ActiveCoolingAlertToEmail) {
+    Action action = battery_temperature_to_action(HI_ACTIVE_COOLING, 60.0f);
+    ASSERT_EQ(action.actionType, ALERT_EMAIL);
+    ASSERT_STREQ(action.actionBody, "Temperature alert: 60.0F");
+}
 
 // ----------- STEP 4 code ends -------
